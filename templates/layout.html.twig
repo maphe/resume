@@ -1,12 +1,11 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-
     <header class="navbar navbar-light navbar-expand-sm bd-navbar">
         <nav class="container">
             <div class="d-flex justify-content-between hidden-lg-up">
                 <h1>
-                    <a class="navbar-brand">
+                    <a class="navbar-brand" href="{{ path('home') }}">
                         Mathieu Pheulpin - Staff Software Engineer/Architect
                     </a>
                 </h1>
@@ -23,12 +22,12 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">
+                        <a class="nav-link" href="{{ path('work_history') }}">
                             <i class="fa fa-address-card-o" aria-hidden="true"></i> Work History
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">
+                        <a class="nav-link" href="{{ path('education') }}">
                             <i class="fa fa-graduation-cap" aria-hidden="true"></i> Education
                         </a>
                     </li>
