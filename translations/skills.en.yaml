@@ -13,7 +13,9 @@ skill:
     oop: OOP
     symfony: Symfony
     javascript: Javascript
+    html: HTML
     html5: HTML5
+    css: CSS
     css3: CSS3
     rest: REST API
     swagger: Swagger
@@ -27,6 +29,8 @@ skill:
     kafka: Kafka
     design-pattern: Design Pattern
     git: Git
+    github: Github
+    gitlab: GitLab
     phpunit: PHPUnit
     vagrant: Vagrant
     docker: Docker
@@ -34,3 +38,18 @@ skill:
     tw-ads-api: Twitter Ads API
     scrum: SCRUM
     jira: JIRA
+    microservice: Microservice
+    scala: Scala
+    jquery: JQuery
+    anguler: Angular
+    bootstrap: Bootstrap
+    intellij: IntelliJ
+    phpstorm: PHPStorm
+    zend: Zend
+    ezpublish: EzPublish
+    jenkins: Jenkins
+    redmine: Redmine
+    highcharts: Highcharts
+    angular: Angular
+    doctrine: Doctrine
+    svn: SVN

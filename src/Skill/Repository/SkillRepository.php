@@ -4,13 +4,15 @@ namespace App\Skill\Repository;
 
 use App\Skill\Entity\Category;
 use App\Skill\Entity\Skill;
+use Twig\Extension\AbstractExtension;
+use Twig\TwigFunction;
 
 /**
  * Class SkillFactory
  *
  * @package App\Skill
  */
-class SkillRepository
+class SkillRepository extends AbstractExtension
 {
     /** @var \App\Skill\Entity\Skill[] */
     protected $skills;
@@ -32,6 +34,17 @@ class SkillRepository
             $this->skills[$slug] = $this->factor($slug, $conf);
         }
     }
+
+    /**
+     * @return \Twig_Function[]
+     */
+    public function getFunctions()
+    {
+        return [
+            new TwigFunction('fetch_skill', [$this, 'findOneBySlug'])
+        ];
+    }
+
 
     /**
      * @param string $slug
@@ -65,6 +78,16 @@ class SkillRepository
     public function findAll()
     {
         return $this->skills;
+    }
+
+    /**
+     * @param string $slug
+     *
+     * @return \App\Skill\Entity\Skill
+     */
+    public function findOneBySlug(string $slug): Skill
+    {
+        return $this->skills[$slug];
     }
 
     /**

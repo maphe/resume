@@ -1,0 +1,10 @@
+{% macro skill_badge(skill) %}
+    <span class="badge badge-{{ skill.category.style }}">{{ ('skill.'~skill.slug)|trans([], 'skills') }}</span>
+{% endmacro skill_badge %}
+
+{% macro skill_badges(skills) %}
+    {% import _self as skillset %}
+    {% for skill in skills %}
+        {{ skillset.skill_badge(fetch_skill(skill)) }}
+    {% endfor %}
+{% endmacro skill_badges %}
