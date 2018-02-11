@@ -13,11 +13,27 @@ use Symfony\Component\Routing\Annotation\Route;
  */
 class DefaultController extends Controller
 {
+    /** @var \App\Skill\Repository\SkillRepository */
+    protected $skillRepository;
+
+    /**
+     * DefaultController constructor.
+     *
+     * @param \App\Skill\Repository\SkillRepository $skillRepository
+     */
+    public function __construct(\App\Skill\Repository\SkillRepository $skillRepository)
+    {
+        $this->skillRepository = $skillRepository;
+    }
+
+
     /**
      * @Route("/", name="home")
      */
     public function home(Request $request)
     {
-        return $this->render('pages/home.html.twig');
+        return $this->render('pages/home.html.twig', [
+            'skills' => $this->skillRepository->findAll()
+        ]);
     }
 }

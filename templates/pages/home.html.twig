@@ -11,37 +11,18 @@
                 <div class="card-body">
                     <h5 class="card-title">In a nutshell</h5>
                     <p class="card-text">
-                        <span class="badge badge-secondary">9-year experience</span>
-                        <span class="badge badge-secondary">San Francisco</span>
-                        <span class="badge badge-secondary">Web</span>
-                        <span class="badge badge-secondary">OOP</span>
-                        <span class="badge badge-secondary">PHP</span>
-                        <span class="badge badge-secondary">Symfony</span>
-                        <span class="badge badge-secondary">Javascript</span>
-                        <span class="badge badge-secondary">HTML5</span>
-                        <span class="badge badge-secondary">CSS3</span>
-                        <span class="badge badge-secondary">REST API</span>
-                        <span class="badge badge-secondary">MongoDB</span>
-                        <span class="badge badge-secondary">Redis</span>
-                        <span class="badge badge-secondary">MySQL</span>
-                        <span class="badge badge-secondary">Apache Phoenix</span>
-                        <span class="badge badge-secondary">HBase</span>
-                        <span class="badge badge-secondary">Presto</span>
-                        <span class="badge badge-secondary">Kafka</span>
-                        <span class="badge badge-secondary">Design Pattern</span>
-                        <span class="badge badge-secondary">git</span>
-                        <span class="badge badge-secondary">Vagrant</span>
-                        <span class="badge badge-secondary">Docker</span>
-                        <span class="badge badge-secondary">Facebook Ads API</span>
-                        <span class="badge badge-secondary">Twitter Ads API</span>
-                        <span class="badge badge-secondary">SCRUM</span>
-                        <span class="badge badge-secondary">JIRA</span>
+                        {% for skill in skills %}
+                            <span class="badge badge-{{ skill.category.style }}">{{ ('skill.'~skill.slug)|trans([], 'skills') }}</span>
+                        {% endfor %}
                     </p>
+                    <a href="/pdf/Mathieu_Pheulpin-Resume.pdf" class="card-link">
+                        <i class="fas fa-file-pdf" aria-hidden="true"></i> Resume
+                    </a>
                     <a href="https://github.com/maphe" class="card-link">
-                        <i class="fa fa-github" aria-hidden="true"></i> Github
+                        <i class="fab fa-github" aria-hidden="true"></i> Github
                     </a>
                     <a href="https://stackoverflow.com/users/1439070/maphe" class="card-link">
-                        <i class="fa fa-stack-overflow" aria-hidden="true"></i> Stack Overflow
+                        <i class="fab fa-stack-overflow" aria-hidden="true"></i> Stack Overflow
                     </a>
                 </div>
             </div>

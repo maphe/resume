@@ -1,0 +1,36 @@
+category:
+    programing: Programing
+    db: Database
+    web: Web
+    api: API
+    tool: Tools
+
+skill:
+    php: PHP
+    9-year-xp: 9-year experience
+    sf: San Francisco
+    web: Web
+    oop: OOP
+    symfony: Symfony
+    javascript: Javascript
+    html5: HTML5
+    css3: CSS3
+    rest: REST API
+    swagger: Swagger
+    postman: Postman
+    mongo: MongoDB
+    redis: Redis
+    mysql: MySQL
+    phoenix: Phoenix
+    hbase: HBase
+    presto: Presto
+    kafka: Kafka
+    design-pattern: Design Pattern
+    git: Git
+    phpunit: PHPUnit
+    vagrant: Vagrant
+    docker: Docker
+    fb-ads-api: Facebook Ads API
+    tw-ads-api: Twitter Ads API
+    scrum: SCRUM
+    jira: JIRA

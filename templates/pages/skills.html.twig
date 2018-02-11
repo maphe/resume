@@ -2,39 +2,50 @@
 
 {% block content %}
 <div class="container">
-    <div class="row">
-        <div class="col">
-            <div class="card">
-                <div class="card-header">
-                    Programming
-                </div>
-                <div class="card-body">
-                    <div class="row">
-                        <div class="col-3">
-                            <div class="card">
-                                <div class="card-body pt-1">
-                                    <div class="row">
-                                        <div class="col-md-auto">
-                                            <img src="https://dt-cdn.net/assets/images/gfx/icons/tech/php-fbd1629392.svg" width="50" height="50">
-                                        </div>
-                                        <div class="col m-auto">
-                                            <p class="card-text">PHP</p>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-12">
-                                            <div class="progress">
-                                                <div class="progress-bar" role="progressbar" style="width: 99%;" aria-valuenow="99" aria-valuemin="0" aria-valuemax="100">99%</div>
+    {% for category in categories %}
+        {% set skills = skillRepository.findScoredByCategory(category) %}
+        {% if skills|length > 0 %}
+            <div class="row mb-3">
+                <div class="col">
+                    <div class="card">
+                        <div class="card-header">
+                            {{ ('category.'~category.slug)|trans([], 'skills') }}
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                                {% for skill in skills %}
+                                    <div class="col-3">
+                                        <div class="card mb-2">
+                                            <div class="card-body pt-1">
+                                                <div class="row">
+                                                    {% if skill.logo %}
+                                                        <div class="col-md-auto">
+                                                            <img class="my-1" src="{{ '/img/logo/'~skill.logo }}" width="45" height="45">
+                                                        </div>
+                                                    {% else %}
+                                                        <div class="pt-5"></div>
+                                                    {% endif %}
+                                                    <div class="col m-auto">
+                                                        <p class="card-text">{{ ('skill.'~skill.slug)|trans([], 'skills') }}</p>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-12">
+                                                        <div class="progress">
+                                                            <div class="progress-bar bg-{{ category.style }}" role="progressbar" style="width: {{ skill.level }}%;" aria-valuenow="{{ skill.level }}" aria-valuemin="0" aria-valuemax="100">{{ skill.level }}%</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                {% endfor %}
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
+        {% endif %}
+    {% endfor %}
 </div>
 {% endblock %}

@@ -1,0 +1,123 @@
+parameters:
+    resume.skill.categories:
+        programing:
+            style: success
+        db:
+            style: danger
+        web:
+            style: info
+        api:
+            style: success
+        tool:
+            style: warning
+        misc:
+            style: warning
+
+    resume.skills:
+        php:
+            category: programing
+            level: 99
+            logo: php.png
+        9-year-xp:
+            category: misc
+        sf:
+            category: misc
+        web:
+            category: web
+            level: 90
+            logo: web.png
+        oop:
+            category: programing
+            level: 95
+            logo: code.png
+        symfony:
+            category: programing
+            level: 95
+            logo: sf.png
+        javascript:
+            category: programing
+            level: 90
+            logo: js.png
+        html5:
+            category: web
+            level: 90
+            logo: html.png
+        css3:
+            category: web
+            level: 80
+            logo: css.png
+        rest:
+            category: api
+            level: 90
+            logo: http.png
+        swagger:
+            category: api
+            level: 95
+            logo: swagger.png
+        postman:
+            category: api
+            level: 90
+            logo: postman.png
+        mongo:
+            category: db
+            level: 80
+            logo: mongodb.png
+        redis:
+            category: db
+            level: 90
+            logo: redis.png
+        mysql:
+            category: db
+            level: 90
+            logo: mysql.png
+        phoenix:
+            category: db
+            level: 80
+            logo: phoenix.png
+        hbase:
+            category: db
+            level: 70
+            logo: hbase.png
+        presto:
+            category: db
+            level: 75
+            logo: presto.png
+        kafka:
+            category: tool
+            level: 70
+            logo: kafka.png
+        design-pattern:
+            category: programing
+            level: 85
+            logo: puzzle.png
+        git:
+            category: tool
+            level: 90
+            logo: git.png
+        phpunit:
+            category: programing
+            level: 90
+        vagrant:
+            category: tool
+            level: 75
+            logo: vagrant.png
+        docker:
+            category: tool
+            level: 60
+            logo: docker.png
+        fb-ads-api:
+            category: api
+            level: 85
+            logo: facebook.png
+        tw-ads-api:
+            category: api
+            level: 70
+            logo: twitter.png
+        scrum:
+            category: tool
+            level: 90
+            logo: scrum.png
+        jira:
+            category: tool
+            level: 90
+            logo: jira.png
