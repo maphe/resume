@@ -1,0 +1,17 @@
+language: php
+php:
+  - 7.2
+
+env:
+    - APP_ENV=dev
+
+  # Update composer
+before-install:
+    - composer self-update
+
+install:
+    - composer install
+
+  # Run script
+script:
+    - bin/phpunit
